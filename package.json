@@ -1,0 +1,47 @@
+{
+  "name": "apo",
+  "type": "module",
+  "version": "0.0.1",
+  "engines": {
+    "node": ">=22.23.4"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "generate-types": "wrangler types",
+    "test": "vitest run",
+    "check": "astro check",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate:local": "wrangler d1 migrations apply apo --local",
+    "db:migrate:remote": "wrangler d1 migrations apply apo --remote",
+    "deploy": "astro build && wrangler deploy",
+    "postinstall": "wrangler types"
+  },
+  "dependencies": {
+    "@astrojs/cloudflare": "^14.4.2",
+    "@astrojs/react": "^7.1.1",
+    "@tailwindcss/vite": "^4.3.3",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "astro": "^7.4.2",
+    "drizzle-orm": "^0.45.4",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "tailwindcss": "^4.3.3",
+    "wrangler": "^4.152.0"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.12",
+    "drizzle-kit": "^0.31.11",
+    "typescript": "^6.0.3",
+    "vitest": "^5.0.5"
+  },
+  "allowScripts": {
+    "esbuild@0.18.20": true,
+    "esbuild@0.25.12": true,
+    "esbuild@0.28.2": true,
+    "workerd@1.20261019.1": true
+  }
+}
